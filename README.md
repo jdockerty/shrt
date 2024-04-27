@@ -1,8 +1,8 @@
 # shrt
 
-A URL shortener, backed by [`squirrel`](squirrel)[^1].
+A URL shortener, backed by [`squirrel`][squirrel][^1].
 
-[^1]: A toy persistent key-value store. Used in this project for fun. 
+[^1]: My toy persistent key-value store, used in this project for fun.
 
 ## API
 
@@ -16,5 +16,9 @@ curl -X POST -d @testdata/add-url.json localhost:9000/api/shorten
 curl localhost:9000/api/url/$SHRT_HASH
 ```
 
+**Delete a shortened URL**
+```
+curl -X DELETE localhost:9000/api/url/$SHRT_HASH
+```
 
 [squirrel]: https://github.com/jdockerty/squirrel
